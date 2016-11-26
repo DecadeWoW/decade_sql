@@ -474,7 +474,8 @@ UPDATE npc_trainer SET spellcost = 0;
 
 #虫子、戒指 buy和sell价格清零，虫子不需要骑术
 UPDATE item_template SET buyPrice = 0, sellPrice = 0, RequiredSkill = 0, requiredSkillRank = 0 WHERE entry = 21176;
-UPDATE item_template SET buyPrice = 0, sellPrice = 0 WHERE entry IN (23059, 23060, 23061,23062,23063,23064,23065,23066,23067);
+UPDATE item_template SET buyPrice = 0, sellPrice = 0, DisenchantID = 0 WHERE entry IN (23059, 23060, 23061,23062,23063,23064,23065,23066,23067);
+UPDATE item_template SET DisenchantID = 0 WHERE entry >= 30000;
 
 #playercreateinfo 地点重置
 UPDATE playercreateinfo SET map = 0, zone = 1537, position_x = -4913.02, position_y = -973.238, position_z = 501.533, orientation = 2.41837 WHERE race IN (1, 3, 4, 7);
