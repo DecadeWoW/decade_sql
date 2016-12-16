@@ -27,6 +27,8 @@ insert into `creature_template` (`Entry`, `Name`, `SubName`, `MinLevel`, `MaxLev
 
 #骑术价格
 #UPDATE npc_trainer SET spellcost = (spellcost / 10) WHERE spell IN (33392, 33389)
+UPDATE npc_trainer SET spellcost = 90000 WHERE spell = 33389;
+UPDATE npc_trainer SET spellcost = 900000 WHERE spell = 33392;
 
 #甲虫坐骑
 #UPDATE item_template SET buyPrice = 1000000 WHERE entry = 21176;

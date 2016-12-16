@@ -470,7 +470,8 @@ insert into `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) values
 
 
 #npc_trainer spellcost清零
-UPDATE npc_trainer SET spellcost = 0;
+UPDATE npc_trainer SET spellcost = 0 WHERE spell NOT IN (33389,33392);
+
 
 #虫子、戒指 buy和sell价格清零，虫子不需要骑术
 UPDATE item_template SET buyPrice = 0, sellPrice = 0, RequiredSkill = 0, requiredSkillRank = 0 WHERE entry = 21176;
